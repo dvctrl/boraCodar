@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #130f1e;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  gap: 16px;
+}
+
+#app {
+  max-width: 360px;
+  padding inline: 40px;
+}
+#app h1 {
+ font-family:Inter;
+ font-weight:700;
+ color: white;
+ margin-bottom:8px;
+}
+
+#app p{
+  font-family:Roboto;
+  color: #FFFFFF;
+  opacity: 0.67;
+  font-weight: 400;
+}
+
+#buttons {
+  margin-top: 122px;
+  align-items: center;
+  display: grid;
+  gap: 32px;
+}
+.primary {
+  --bg--default: #8257e5;
+  --bg--hover: #9674e5;
+  --bg--focus: #d9cdf7;
+}
+.secondary {
+  --bg--default: #3c3748;
+  --bg--hover: #6a617f;
+  --bg--focus: #d9cdf7;
+}
+
+.tertiary {
+  --bg--default: transparent;
+  --bg--hover: transparent;
+  --bg--focus: transparent;
+}
+
+button {
+  font-family: "Inter";
+  background-color: var(--bg--default);
+  color: #ffffff;
+
+  border-radius: 24px;
+  border: 0px;
+
+  align-items: center;
+  padding: 12px 24px;
+  gap: 8px;
+
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.loading {
+  cursor: progress;
+}
+.loading i {
+  font-size: 16px;
+  animation: loading 1s infinite linear;
+}
+
+.movable {
+  cursor: move;
+}
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button:hover {
+  background: var(--bg--hover);
+  border: 0px;
+}
+
+button:focus {
+  outline: 2px solid var(--bg--focus);
+}
+
+button:disabled {
+  opacity: 0.56;
+  cursor: not-allowed;
+}
