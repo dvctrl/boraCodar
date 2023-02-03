@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/phosphor-icons"></script>
+
+  <title>Chat #BoraCodar</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <div id="top">
+      <div id="user-info">
+        <img src="https://randomuser.me/api/portraits/women/75.jpg" alt="woman-user">
+
+        <div class="name">
+          <h3>Cecilia Rosa</h3>
+          <div class="status">
+            online
+          </div>
+        </div>
+      </div>
+
+      <div id="close-chat">
+        <i class="ph-x"></i>
+      </div>
+
+    </div>
+
+    <div id="messages">
+      <div id="last-seen">11:30</div>
+
+      <div class="messages">
+        <div class="message">
+          <div class="user-send-date">Cecilia - 11:30</div>
+          <div class="body-message">Tive uma ideia incrível para um projeto! 😍</div>
+        </div>
+        <div class="message-you">
+          <div class="user-send-date">Você - 11:32</div>
+          <div class="body-message-you">Sério? Me conta mais.</div>
+        </div>
+        <div class="message">
+          <div class="user-send-date">Cecilia - 11:33</div>
+          <div class="body-message">E se a gente fizesse um chat moderno e responsivo em apenas uma semana?</div>
+        </div>
+        <div class="message-you">
+          <div class="user-send-date">Você - 11:33</div>
+          <div class="body-message-you">#boracodar🚀</div>
+        </div>
+      </div>
+    </div>
+
+    <form id="bottom">
+      <input type="text" placeholder="Digite sua mensagem" />
+      <button>
+        <i class="ph-paper-plane-right-fill"></i>
+      </button>
+    </form>
+  </div>
+  </div>
+
+  <script>
+    const messages = document.querySelector('.messages')
+    messages.lastElementChild.scrollIntoView()
+  </script>
+</body>
+
+</html>
